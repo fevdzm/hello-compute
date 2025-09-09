@@ -1,0 +1,12 @@
+// Let's get the time of day and find out how far from UTC it is
+let displayTime = new Date().getHours();
+let offset = geo.utc_offset;
+displayTime += offset / 100;
+
+// Tailor the greeting to the user time of day
+greeting =
+  displayTime > 4 && displayTime < 12
+    ? "Morning! "
+    : displayTime >= 12 && displayTime < 18
+    ? "Afternoon! "
+    : "Evening! ";
